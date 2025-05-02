@@ -20,7 +20,6 @@ namespace _152120231068_ErenTerakye_Group11_LabA
 
         private void FillCityCombobox()
         {
-            // List of cities in Turkey
             List<string> cities = new List<string>
             {
                 "Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Aksaray", "Amasya", "Ankara", "Antalya", "Ardahan",
@@ -46,12 +45,14 @@ namespace _152120231068_ErenTerakye_Group11_LabA
         {
 
         }
-
+        
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
+            // It is assumed that colleagues who graduated
+            // from English-taught universities have
+            // demonstrated English language proficiency
             if (checkBox2.Checked)
             {
-                checkBox1.Checked = true;
                 checkBox1.Enabled = false;
             }
             else
