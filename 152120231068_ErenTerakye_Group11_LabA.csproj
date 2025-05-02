@@ -54,11 +54,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="salary-calculator.cs">
+    <Compile Include="salary_calculator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="salary-calculator.Designer.cs">
-      <DependentUpon>salary-calculator.cs</DependentUpon>
+    <Compile Include="salary_calculator.Designer.cs">
+      <DependentUpon>salary_calculator.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -69,8 +69,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="salary-calculator.resx">
-      <DependentUpon>salary-calculator.cs</DependentUpon>
+    <EmbeddedResource Include="salary_calculator.resx">
+      <DependentUpon>salary_calculator.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
