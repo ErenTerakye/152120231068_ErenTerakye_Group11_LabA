@@ -17,6 +17,7 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             InitializeComponent();
             FillCityCombobox();
             FillEducationCombobox();
+            FillPositionCombobox();
         }
 
         private void FillCityCombobox()
@@ -55,6 +56,22 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             };
 
             comboBoxEducation.Items.AddRange(educationLevels.ToArray());
+        }
+
+        private void FillPositionCombobox()
+        {
+            List<string> positions = new List<string>
+            {
+                "-",
+                "Team Lead / Group Manager / Technical Manager / Software Architect",
+                "Project Manager",
+                "Director / Head of Projects",
+                "CTO (Chief Technology Officer) / CEO (Chief Executive Officer)",
+                "IT Officer / Manager (there are no more than 5 staff in the department)",
+                "IT Officer / Manager (there are more than 5 staff in the department)"
+            };
+
+            comboBoxPosition.Items.AddRange(positions.ToArray());
         }
 
         private void label1_Click(object sender, EventArgs e)
