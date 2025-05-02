@@ -175,6 +175,7 @@
             this.checkBox2.TabIndex = 17;
             this.checkBox2.Text = "Graduate of an English-Taught Program";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
