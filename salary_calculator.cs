@@ -96,13 +96,13 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             if (checkBox3.Checked)
             {
                 label5.Visible = true;
-                textBox2.Visible = true;
+                numericUpDown2.Visible = true;
             }
             else
             {
                 label5.Visible = false;
-                textBox2.Visible = false;
-                textBox2.Text = "";
+                numericUpDown2.Visible = false;
+                numericUpDown2.Value = 0;
             }
         }
     }
