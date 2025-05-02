@@ -74,6 +74,7 @@
             // 
             // comboBoxCities
             // 
+            this.comboBoxCities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCities.FormattingEnabled = true;
             this.comboBoxCities.Location = new System.Drawing.Point(364, 57);
             this.comboBoxCities.Name = "comboBoxCities";
