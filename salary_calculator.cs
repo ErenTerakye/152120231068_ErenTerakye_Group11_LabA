@@ -18,13 +18,17 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             FillCityCombobox();
             FillEducationCombobox();
             FillPositionCombobox();
+
+            comboBoxCities.SelectedItem = "-";
+            comboBoxEducation.SelectedItem = "-";
+            comboBoxPosition.SelectedItem = "-";
         }
 
         private void FillCityCombobox()
         {
             List<string> cities = new List<string>
             {
-                "Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Aksaray", "Amasya", "Ankara", "Antalya", "Ardahan",
+                "-", "Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Aksaray", "Amasya", "Ankara", "Antalya", "Ardahan",
                 "Artvin", "Aydın", "Balıkesir", "Bartın", "Batman", "Bayburt", "Bilecik", "Bingöl", "Bitlis",
                 "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Düzce",
                 "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane",

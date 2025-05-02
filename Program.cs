@@ -16,8 +16,8 @@ namespace _152120231068_ErenTerakye_Group11_LabA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new Form1());
-            Application.Run(new salary_calculator());
+            Application.Run(new Form1());
+            // Application.Run(new salary_calculator());
         }
     }
 }
