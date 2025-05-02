@@ -51,14 +51,7 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             // It is assumed that colleagues who graduated
             // from English-taught universities have
             // demonstrated English language proficiency
-            if (checkBox2.Checked)
-            {
-                checkBox1.Enabled = false;
-            }
-            else
-            {
-                checkBox1.Enabled = true;
-            }
+            checkBox1.Enabled = !checkBox2.Checked;
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
