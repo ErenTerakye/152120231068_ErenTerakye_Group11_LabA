@@ -45,22 +45,24 @@
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownGrossMinimumWage = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.buttonCalculate = new System.Windows.Forms.Button();
+            this.labelBaseSalary = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGrossMinimumWage)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -232,21 +234,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Number of Children";
             // 
-            // numericUpDown3
+            // label10
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(112, 19);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(42, 20);
-            this.numericUpDown3.TabIndex = 0;
+            this.label10.Location = new System.Drawing.Point(15, 73);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 33);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "18+ University Student:";
             // 
-            // label8
+            // numericUpDown5
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 21);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Ages 0–6:";
+            this.numericUpDown5.Location = new System.Drawing.Point(112, 71);
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(42, 20);
+            this.numericUpDown5.TabIndex = 4;
             // 
             // label9
             // 
@@ -264,39 +265,40 @@
             this.numericUpDown4.Size = new System.Drawing.Size(42, 20);
             this.numericUpDown4.TabIndex = 2;
             // 
-            // label10
+            // label8
             // 
-            this.label10.Location = new System.Drawing.Point(15, 73);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 33);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "18+ University Student:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(15, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Ages 0–6:";
             // 
-            // numericUpDown5
+            // numericUpDown3
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(112, 71);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(42, 20);
-            this.numericUpDown5.TabIndex = 4;
+            this.numericUpDown3.Location = new System.Drawing.Point(112, 19);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(42, 20);
+            this.numericUpDown3.TabIndex = 0;
             // 
-            // numericUpDown6
+            // numericUpDownGrossMinimumWage
             // 
-            this.numericUpDown6.DecimalPlaces = 2;
-            this.numericUpDown6.Increment = new decimal(new int[] {
+            this.numericUpDownGrossMinimumWage.DecimalPlaces = 2;
+            this.numericUpDownGrossMinimumWage.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown6.Location = new System.Drawing.Point(456, 267);
-            this.numericUpDown6.Maximum = new decimal(new int[] {
+            this.numericUpDownGrossMinimumWage.Location = new System.Drawing.Point(456, 267);
+            this.numericUpDownGrossMinimumWage.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(83, 20);
-            this.numericUpDown6.TabIndex = 23;
-            this.numericUpDown6.Value = new decimal(new int[] {
+            this.numericUpDownGrossMinimumWage.Name = "numericUpDownGrossMinimumWage";
+            this.numericUpDownGrossMinimumWage.Size = new System.Drawing.Size(83, 20);
+            this.numericUpDownGrossMinimumWage.TabIndex = 23;
+            this.numericUpDownGrossMinimumWage.Value = new decimal(new int[] {
             260055,
             0,
             0,
@@ -321,14 +323,36 @@
             this.label12.TabIndex = 25;
             this.label12.Text = "TL";
             // 
+            // buttonCalculate
+            // 
+            this.buttonCalculate.Location = new System.Drawing.Point(457, 310);
+            this.buttonCalculate.Name = "buttonCalculate";
+            this.buttonCalculate.Size = new System.Drawing.Size(75, 23);
+            this.buttonCalculate.TabIndex = 26;
+            this.buttonCalculate.Text = "Calculate";
+            this.buttonCalculate.UseVisualStyleBackColor = true;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
+            // 
+            // labelBaseSalary
+            // 
+            this.labelBaseSalary.AutoSize = true;
+            this.labelBaseSalary.Location = new System.Drawing.Point(39, 385);
+            this.labelBaseSalary.Name = "labelBaseSalary";
+            this.labelBaseSalary.Size = new System.Drawing.Size(206, 13);
+            this.labelBaseSalary.TabIndex = 27;
+            this.labelBaseSalary.Text = "Base Salary = Gross Minimum Wage * 2 = ";
+            this.labelBaseSalary.Visible = false;
+            // 
             // salary_calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelBaseSalary);
+            this.Controls.Add(this.buttonCalculate);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.numericUpDown6);
+            this.Controls.Add(this.numericUpDownGrossMinimumWage);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.numericUpDown2);
@@ -352,10 +376,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGrossMinimumWage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,8 +410,10 @@
         private System.Windows.Forms.NumericUpDown numericUpDown4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.NumericUpDown numericUpDownGrossMinimumWage;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button buttonCalculate;
+        private System.Windows.Forms.Label labelBaseSalary;
     }
 }

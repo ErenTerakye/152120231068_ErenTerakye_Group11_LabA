@@ -12,6 +12,9 @@ namespace _152120231068_ErenTerakye_Group11_LabA
 {
     public partial class salary_calculator : Form
     {
+        decimal grossMinimumWage;
+        decimal baseSalary;
+
         public salary_calculator()
         {
             InitializeComponent();
@@ -104,6 +107,15 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                 numericUpDown2.Visible = false;
                 numericUpDown2.Value = 0;
             }
+        }
+
+        private void buttonCalculate_Click(object sender, EventArgs e)
+        {
+            grossMinimumWage = numericUpDownGrossMinimumWage.Value;
+            baseSalary = grossMinimumWage * 2;
+
+            labelBaseSalary.Text = "Base Salary = Gross Minimum Wage * 2 = " + grossMinimumWage.ToString("F2") + " * 2 = " + baseSalary.ToString("F2") + " TL";
+            labelBaseSalary.Visible = true;
         }
     }
 }
