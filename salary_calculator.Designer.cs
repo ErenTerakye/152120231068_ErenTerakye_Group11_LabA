@@ -114,6 +114,7 @@
             this.label5.Size = new System.Drawing.Size(210, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Certified Additional Foreign Language Skills";
+            this.label5.Visible = false;
             // 
             // label6
             // 
@@ -155,6 +156,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 15;
+            this.textBox2.Visible = false;
             // 
             // checkBox1
             // 
@@ -186,6 +188,7 @@
             this.checkBox3.TabIndex = 18;
             this.checkBox3.Text = "Certified Knowledge of Additional Foreign Languages";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // salary_calculator
             // 

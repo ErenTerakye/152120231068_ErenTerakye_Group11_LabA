@@ -34,5 +34,20 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                 checkBox1.Enabled = true;
             }
         }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked)
+            {
+                label5.Visible = true;
+                textBox2.Visible = true;
+            }
+            else
+            {
+                label5.Visible = false;
+                textBox2.Visible = false;
+                textBox2.Text = "";
+            }
+        }
     }
 }
