@@ -16,6 +16,7 @@ namespace _152120231068_ErenTerakye_Group11_LabA
         {
             InitializeComponent();
             FillCityCombobox();
+            FillEducationCombobox();
         }
 
         private void FillCityCombobox()
@@ -39,6 +40,21 @@ namespace _152120231068_ErenTerakye_Group11_LabA
 
             // Add cities to ComboBox
             comboBoxCities.Items.AddRange(cities.ToArray());
+        }
+
+        private void FillEducationCombobox()
+        {
+            List<string> educationLevels = new List<string>
+            {
+                "-",
+                "Master’s Degree in a Relevant Field",
+                "PhD in a Relevant Field",
+                "Associate Professorship in a Relevant Field",
+                "Master’s Degree in an Unrelated Field",
+                "PhD/Associate Professorship in an Unrelated Field"
+            };
+
+            comboBoxEducation.Items.AddRange(educationLevels.ToArray());
         }
 
         private void label1_Click(object sender, EventArgs e)
