@@ -57,6 +57,7 @@
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.labelBaseSalary = new System.Windows.Forms.Label();
             this.labelTotalMultiplier = new System.Windows.Forms.Label();
+            this.labelMinimumGrossSalary = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearsWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCertifiedAdditional)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -346,17 +347,28 @@
             // 
             // labelTotalMultiplier
             // 
-            this.labelTotalMultiplier.Location = new System.Drawing.Point(39, 383);
+            this.labelTotalMultiplier.Location = new System.Drawing.Point(38, 383);
             this.labelTotalMultiplier.Name = "labelTotalMultiplier";
             this.labelTotalMultiplier.Size = new System.Drawing.Size(429, 58);
             this.labelTotalMultiplier.TabIndex = 28;
             this.labelTotalMultiplier.Text = "Total Multiplier: ";
+            // 
+            // labelMinimumGrossSalary
+            // 
+            this.labelMinimumGrossSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMinimumGrossSalary.Location = new System.Drawing.Point(502, 358);
+            this.labelMinimumGrossSalary.Name = "labelMinimumGrossSalary";
+            this.labelMinimumGrossSalary.Size = new System.Drawing.Size(211, 83);
+            this.labelMinimumGrossSalary.TabIndex = 29;
+            this.labelMinimumGrossSalary.Text = "Minimum Monthly Gross Salary = ";
+            this.labelMinimumGrossSalary.Visible = false;
             // 
             // salary_calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelMinimumGrossSalary);
             this.Controls.Add(this.labelTotalMultiplier);
             this.Controls.Add(this.labelBaseSalary);
             this.Controls.Add(this.buttonCalculate);
@@ -426,5 +438,6 @@
         private System.Windows.Forms.Button buttonCalculate;
         private System.Windows.Forms.Label labelBaseSalary;
         private System.Windows.Forms.Label labelTotalMultiplier;
+        private System.Windows.Forms.Label labelMinimumGrossSalary;
     }
 }
