@@ -80,7 +80,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(453, 38);
+            this.label2.Location = new System.Drawing.Point(501, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 16);
             this.label2.TabIndex = 2;
@@ -90,7 +90,7 @@
             // 
             this.comboBoxCities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCities.FormattingEnabled = true;
-            this.comboBoxCities.Location = new System.Drawing.Point(456, 57);
+            this.comboBoxCities.Location = new System.Drawing.Point(504, 57);
             this.comboBoxCities.Name = "comboBoxCities";
             this.comboBoxCities.Size = new System.Drawing.Size(121, 21);
             this.comboBoxCities.TabIndex = 4;
@@ -111,7 +111,7 @@
             this.comboBoxEducation.FormattingEnabled = true;
             this.comboBoxEducation.Location = new System.Drawing.Point(42, 106);
             this.comboBoxEducation.Name = "comboBoxEducation";
-            this.comboBoxEducation.Size = new System.Drawing.Size(349, 21);
+            this.comboBoxEducation.Size = new System.Drawing.Size(357, 21);
             this.comboBoxEducation.TabIndex = 6;
             // 
             // label4
@@ -150,14 +150,14 @@
             this.comboBoxPosition.FormattingEnabled = true;
             this.comboBoxPosition.Location = new System.Drawing.Point(43, 157);
             this.comboBoxPosition.Name = "comboBoxPosition";
-            this.comboBoxPosition.Size = new System.Drawing.Size(348, 21);
+            this.comboBoxPosition.Size = new System.Drawing.Size(356, 21);
             this.comboBoxPosition.TabIndex = 12;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(454, 87);
+            this.label7.Location = new System.Drawing.Point(502, 87);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 16);
             this.label7.TabIndex = 13;
@@ -213,7 +213,7 @@
             // checkBoxMarried
             // 
             this.checkBoxMarried.AutoSize = true;
-            this.checkBoxMarried.Location = new System.Drawing.Point(456, 106);
+            this.checkBoxMarried.Location = new System.Drawing.Point(504, 106);
             this.checkBoxMarried.Name = "checkBoxMarried";
             this.checkBoxMarried.Size = new System.Drawing.Size(168, 17);
             this.checkBoxMarried.TabIndex = 21;
@@ -228,7 +228,7 @@
             this.groupBox1.Controls.Add(this.numericUpDownSevenToEighteen);
             this.groupBox1.Controls.Add(this.labelZeroToSix);
             this.groupBox1.Controls.Add(this.numericUpDownZeroToSix);
-            this.groupBox1.Location = new System.Drawing.Point(455, 129);
+            this.groupBox1.Location = new System.Drawing.Point(503, 129);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(177, 109);
             this.groupBox1.TabIndex = 22;
@@ -290,7 +290,7 @@
             0,
             0,
             0});
-            this.numericUpDownGrossMinimumWage.Location = new System.Drawing.Point(456, 267);
+            this.numericUpDownGrossMinimumWage.Location = new System.Drawing.Point(504, 267);
             this.numericUpDownGrossMinimumWage.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -309,7 +309,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(452, 246);
+            this.label11.Location = new System.Drawing.Point(500, 246);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(139, 16);
             this.label11.TabIndex = 24;
@@ -318,7 +318,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(545, 269);
+            this.label12.Location = new System.Drawing.Point(593, 269);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(20, 13);
             this.label12.TabIndex = 25;
@@ -326,7 +326,7 @@
             // 
             // buttonCalculate
             // 
-            this.buttonCalculate.Location = new System.Drawing.Point(457, 310);
+            this.buttonCalculate.Location = new System.Drawing.Point(505, 310);
             this.buttonCalculate.Name = "buttonCalculate";
             this.buttonCalculate.Size = new System.Drawing.Size(75, 23);
             this.buttonCalculate.TabIndex = 26;
@@ -337,7 +337,7 @@
             // labelBaseSalary
             // 
             this.labelBaseSalary.AutoSize = true;
-            this.labelBaseSalary.Location = new System.Drawing.Point(39, 373);
+            this.labelBaseSalary.Location = new System.Drawing.Point(38, 358);
             this.labelBaseSalary.Name = "labelBaseSalary";
             this.labelBaseSalary.Size = new System.Drawing.Size(206, 13);
             this.labelBaseSalary.TabIndex = 27;
@@ -346,9 +346,9 @@
             // 
             // labelTotalMultiplier
             // 
-            this.labelTotalMultiplier.Location = new System.Drawing.Point(40, 398);
+            this.labelTotalMultiplier.Location = new System.Drawing.Point(39, 383);
             this.labelTotalMultiplier.Name = "labelTotalMultiplier";
-            this.labelTotalMultiplier.Size = new System.Drawing.Size(409, 43);
+            this.labelTotalMultiplier.Size = new System.Drawing.Size(429, 58);
             this.labelTotalMultiplier.TabIndex = 28;
             this.labelTotalMultiplier.Text = "Total Multiplier: ";
             // 

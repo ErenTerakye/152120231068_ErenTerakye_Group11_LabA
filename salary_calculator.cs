@@ -68,7 +68,7 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                 "PhD in a Relevant Field",
                 "Associate Professorship in a Relevant Field",
                 "Master’s Degree in an Unrelated Field",
-                "PhD/Associate Professorship in an Unrelated Field"
+                "PhD / Associate Professorship in an Unrelated Field"
             };
 
             comboBoxEducation.Items.AddRange(educationLevels.ToArray());
@@ -126,6 +126,7 @@ namespace _152120231068_ErenTerakye_Group11_LabA
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
             totalMultiplier = 0;
+            bool isLabelUpdated = false;
 
             grossMinimumWage = numericUpDownGrossMinimumWage.Value;
             baseSalary = grossMinimumWage * 2;
@@ -137,7 +138,6 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             childrenSevenToEighteen = (int)numericUpDownSevenToEighteen.Value;
             childrenOverEighteen = (int)numericUpDownOverEighteen.Value;
 
-
             labelBaseSalary.Visible = true;
             labelBaseSalary.Text = "Base Salary = Gross Minimum Wage * 2 = " +
                 grossMinimumWage.ToString("F2") + " * 2 = " +
@@ -146,131 +146,118 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             labelTotalMultiplier.Text = "Total Multiplier: ";
 
             // Adjusts the totalMultiplier based on years worked
-            if (yearsWorked >= 2 &&
-                yearsWorked <= 4)
+            if (yearsWorked >= 2 && yearsWorked <= 4)
             {
                 totalMultiplier += 0.6m;
-
                 labelTotalMultiplier.Text += "0,60 (Years Working)";
+                isLabelUpdated = true;
             }
-            else if (yearsWorked >= 5 &&
-                yearsWorked <= 9)
+            else if (yearsWorked >= 5 && yearsWorked <= 9)
             {
                 totalMultiplier += 1;
-
                 labelTotalMultiplier.Text += "1,00 (Years Working)";
+                isLabelUpdated = true;
             }
-            else if (yearsWorked >= 10 &&
-                yearsWorked <= 14)
+            else if (yearsWorked >= 10 && yearsWorked <= 14)
             {
                 totalMultiplier += 1.2m;
-
                 labelTotalMultiplier.Text += "1,20 (Years Working)";
+                isLabelUpdated = true;
             }
-            else if (yearsWorked >= 15 &&
-                yearsWorked <= 20)
+            else if (yearsWorked >= 15 && yearsWorked <= 20)
             {
                 totalMultiplier += 1.35m;
-
                 labelTotalMultiplier.Text += "1,35 (Years Working)";
+                isLabelUpdated = true;
             }
             else if (yearsWorked > 20)
             {
                 totalMultiplier += 1.5m;
-
                 labelTotalMultiplier.Text += "1,50 (Years Working)";
+                isLabelUpdated = true;
             }
 
             // Adjusts the totalMultiplier based on the city of residence
             if (cityOfResidence == "İstanbul")
             {
                 totalMultiplier += 0.3m;
-
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "0,30 (" + cityOfResidence + ")";
+                isLabelUpdated = true;
             }
-            else if (cityOfResidence == "Ankara" ||
-                cityOfResidence == "İzmir")
+            else if (cityOfResidence == "Ankara" || cityOfResidence == "İzmir")
             {
                 totalMultiplier += 0.2m;
-
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "0,20 (" + cityOfResidence + ")";
+                isLabelUpdated = true;
             }
-            else if (cityOfResidence == "Kocaeli" ||
-                cityOfResidence == "Sakarya" ||
-                cityOfResidence == "Düzce" ||
-                cityOfResidence == "Bolu" ||
-                cityOfResidence == "Yalova" ||
-                cityOfResidence == "Edirne" ||
-                cityOfResidence == "Kırklareli" ||
-                cityOfResidence == "Tekirdağ")
+            else if (cityOfResidence == "Kocaeli" || cityOfResidence == "Sakarya" || cityOfResidence == "Düzce" ||
+                     cityOfResidence == "Bolu" || cityOfResidence == "Yalova" || cityOfResidence == "Edirne" ||
+                     cityOfResidence == "Kırklareli" || cityOfResidence == "Tekirdağ")
             {
                 totalMultiplier += 0.1m;
-
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "0,10 (" + cityOfResidence + ")";
+                isLabelUpdated = true;
             }
-            else if (cityOfResidence == "Trabzon" ||
-                cityOfResidence == "Ordu" ||
-                cityOfResidence == "Giresun" ||
-                cityOfResidence == "Rize" ||
-                cityOfResidence == "Artvin" ||
-                cityOfResidence == "Gümüşhane" ||
-                cityOfResidence == "Bursa" ||
-                cityOfResidence == "Eskişehir" ||
-                cityOfResidence == "Bilecik" ||
-                cityOfResidence == "Aydın" ||
-                cityOfResidence == "Denizli" ||
-                cityOfResidence == "Muğla" ||
-                cityOfResidence == "Adana" ||
-                cityOfResidence == "Mersin" ||
-                cityOfResidence == "Balıkesir" ||
-                cityOfResidence == "Çanakkale" ||
-                cityOfResidence == "Antalya" ||
-                cityOfResidence == "Isparta" ||
-                cityOfResidence == "Burdur")
+            else if (cityOfResidence == "Trabzon" || cityOfResidence == "Ordu" || cityOfResidence == "Giresun" ||
+                     cityOfResidence == "Rize" || cityOfResidence == "Artvin" || cityOfResidence == "Gümüşhane" ||
+                     cityOfResidence == "Bursa" || cityOfResidence == "Eskişehir" || cityOfResidence == "Bilecik" ||
+                     cityOfResidence == "Aydın" || cityOfResidence == "Denizli" || cityOfResidence == "Muğla" ||
+                     cityOfResidence == "Adana" || cityOfResidence == "Mersin" || cityOfResidence == "Balıkesir" ||
+                     cityOfResidence == "Çanakkale" || cityOfResidence == "Antalya" || cityOfResidence == "Isparta" ||
+                     cityOfResidence == "Burdur")
             {
                 totalMultiplier += 0.05m;
-
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "0,05 (" + cityOfResidence + ")";
+                isLabelUpdated = true;
             }
 
             // Adjusts the totalMultiplier based on the education level
             if (highestEducationLevel == "Master’s Degree in a Relevant Field")
             {
                 totalMultiplier += 0.1m;
-
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "0,10 (Master's Degree)";
+                isLabelUpdated = true;
             }
             else if (highestEducationLevel == "PhD in a Relevant Field")
             {
                 totalMultiplier += 0.3m;
-
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "0,30 (PhD)";
+                isLabelUpdated = true;
             }
             else if (highestEducationLevel == "Associate Professorship in a Relevant Field")
             {
                 totalMultiplier += 0.35m;
-
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "0,35 (Associate Professorship)";
+                isLabelUpdated = true;
             }
             else if (highestEducationLevel == "Master’s Degree in an Unrelated Field")
             {
                 totalMultiplier += 0.05m;
-
-                labelTotalMultiplier.Text += "0,05 (Master's Degree in a Unrelated Field)";
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
+                labelTotalMultiplier.Text += "0,05 (Master's Degree in an Unrelated Field)";
+                isLabelUpdated = true;
             }
-            else if (highestEducationLevel == "PhD/Associate Professorship in an Unrelated Field") 
+            else if (highestEducationLevel == "PhD / Associate Professorship in an Unrelated Field")
             {
                 totalMultiplier += 0.15m;
-
-                labelTotalMultiplier.Text += "0,15 (PhD/Associate Professorship in an Unrelated Field)";
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
+                labelTotalMultiplier.Text += "0,15 (PhD / Associate Professorship in an Unrelated Field)";
+                isLabelUpdated = true;
             }
 
             // Adjusts the totalMultiplier based on English proficiency
             if (checkBoxCertifiedEnglish.Checked || checkBoxGraduateOfEnglish.Checked)
             {
                 totalMultiplier += 0.2m;
-
-                if(checkBoxGraduateOfEnglish.Checked)
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
+                if (checkBoxGraduateOfEnglish.Checked)
                 {
                     labelTotalMultiplier.Text += "0,20 (Graduate of English-Taught Program)";
                 }
@@ -278,61 +265,72 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                 {
                     labelTotalMultiplier.Text += "0,20 (Certified English Proficiency)";
                 }
+                isLabelUpdated = true;
             }
 
-            if (checkBoxCertifiedAdditional.Checked &&
-                numericUpDownCertifiedAdditional.Value != 0)
+            if (checkBoxCertifiedAdditional.Checked && numericUpDownCertifiedAdditional.Value != 0)
             {
                 totalMultiplier += numericUpDownCertifiedAdditional.Value * 0.05m;
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += (numericUpDownCertifiedAdditional.Value * 0.05m).ToString("F2") + " (Certified Knowledge of Additional Foreign Language(s))";
+                isLabelUpdated = true;
             }
 
             // Adjusts the totalMultiplier based on the managerial position
-            if (managerialPosition == "Team Lead" ||
-                managerialPosition == "Group Manager" ||
-                managerialPosition == "Technical Manager" ||
-                managerialPosition == "Software Architect")
+            if (managerialPosition == "Team Lead" || managerialPosition == "Group Manager" ||
+                managerialPosition == "Technical Manager" || managerialPosition == "Software Architect")
             {
                 totalMultiplier += 0.5m;
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "0,50 (" + managerialPosition + ")";
+                isLabelUpdated = true;
             }
             else if (managerialPosition == "Project Manager")
             {
                 totalMultiplier += 0.75m;
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "0,75 (" + managerialPosition + ")";
+                isLabelUpdated = true;
             }
-            else if (managerialPosition == "Director" ||
-                managerialPosition == "Head of Projects")
+            else if (managerialPosition == "Director" || managerialPosition == "Head of Projects")
             {
                 totalMultiplier += 0.85m;
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "0,85 (" + managerialPosition + ")";
+                isLabelUpdated = true;
             }
-            else if (managerialPosition == "CTO (Chief Technology Officer)" ||
-                managerialPosition == "CEO (Chief Executive Officer)")
-
+            else if (managerialPosition == "CTO (Chief Technology Officer)" || managerialPosition == "CEO (Chief Executive Officer)")
             {
                 totalMultiplier += 1;
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "1,00 (" + managerialPosition + ")";
+                isLabelUpdated = true;
             }
             else if (managerialPosition == "IT Officer / Manager (there are no more than 5 staff in the department)")
             {
                 totalMultiplier += 0.4m;
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "0,40 (IT Officer / Manager - <=5 Staff)";
+                isLabelUpdated = true;
             }
             else if (managerialPosition == "IT Officer / Manager (there are more than 5 staff in the department)")
             {
                 totalMultiplier += 0.6m;
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "0,60 (IT Officer / Manager - >5 Staff)";
+                isLabelUpdated = true;
             }
 
-            // Family allowance is reflected in the wage calculation by taking into account a maximum of two children for whom the individual is responsible. The coefficients are applied based on the two oldest children among those eligible. Among children over the age of eighteen, only those who are continuing their associate or bachelor's degree education are included in the calculation. Family status coefficient: Married and spouse is not working 0.20, Child aged zero to six 0.20, Child aged seven to eighteen 0.30, Child over eighteen only if a university undergraduate or associate degree student 0.40.
+            // Family allowance
             if (checkBoxMarried.Checked)
             {
                 totalMultiplier += 0.2m;
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += "0,20 (Married and Spouse is not Working)";
+                isLabelUpdated = true;
             }
 
-            // Calculate the allowence for children based on the oldest 2 children
+            // Calculate the allowance for children
             List<decimal> childCoefficients = new List<decimal>();
 
             for (int i = 0; i < childrenZeroToSix; i++)
@@ -350,7 +348,6 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                 childCoefficients.Add(0.40m);
             }
 
-            // Sort the coefficients in descending order to prioritize the oldest children
             childCoefficients.Sort((a, b) => b.CompareTo(a));
 
             decimal childAllowance = 0;
@@ -362,8 +359,11 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             totalMultiplier += childAllowance;
             if (childAllowance > 0)
             {
+                if (isLabelUpdated) labelTotalMultiplier.Text += " + ";
                 labelTotalMultiplier.Text += childAllowance.ToString("F2") + " (Child Allowance)";
             }
+
+            if (isLabelUpdated) labelTotalMultiplier.Text += " = " + totalMultiplier.ToString("F2");
         }
     }
 }
