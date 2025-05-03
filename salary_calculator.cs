@@ -14,6 +14,7 @@ namespace _152120231068_ErenTerakye_Group11_LabA
     {
         decimal grossMinimumWage;
         decimal baseSalary;
+        decimal totalMultiplier;
 
         public salary_calculator()
         {
@@ -111,11 +112,51 @@ namespace _152120231068_ErenTerakye_Group11_LabA
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
+            totalMultiplier = 0;
+
             grossMinimumWage = numericUpDownGrossMinimumWage.Value;
             baseSalary = grossMinimumWage * 2;
 
-            labelBaseSalary.Text = "Base Salary = Gross Minimum Wage * 2 = " + grossMinimumWage.ToString("F2") + " * 2 = " + baseSalary.ToString("F2") + " TL";
             labelBaseSalary.Visible = true;
+            labelBaseSalary.Text = "Base Salary = Gross Minimum Wage * 2 = " +
+                grossMinimumWage.ToString("F2") + " * 2 = " +
+                baseSalary.ToString("F2") + " TL";
+
+            labelTotalMultiplier.Text = "Total Multiplier: ";
+            if (numericUpDownYearsWorking.Value >= 2 &&
+                numericUpDownYearsWorking.Value <= 4)
+            {
+                totalMultiplier += 0.6m;
+
+                labelTotalMultiplier.Text += "0,60 (Years Working)";
+            }
+            else if (numericUpDownYearsWorking.Value >= 5 &&
+                numericUpDownYearsWorking.Value <= 9)
+            {
+                totalMultiplier += 1;
+
+                labelTotalMultiplier.Text += "1,00 (Years Working)";
+            }
+            else if (numericUpDownYearsWorking.Value >= 10 &&
+                numericUpDownYearsWorking.Value <= 14)
+            {
+                totalMultiplier += 1.2m;
+
+                labelTotalMultiplier.Text += "1,20 (Years Working)";
+            }
+            else if (numericUpDownYearsWorking.Value >= 15 &&
+                numericUpDownYearsWorking.Value <= 20)
+            {
+                totalMultiplier += 1.35m;
+
+                labelTotalMultiplier.Text += "1,35 (Years Working)";
+            }
+            else if (numericUpDownYearsWorking.Value > 20)
+            {
+                totalMultiplier += 1.5m;
+
+                labelTotalMultiplier.Text += "1,50 (Years Working)";
+            }
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelYearsWorking = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxCities = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownYearsWorking = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -56,7 +56,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.labelBaseSalary = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.labelTotalMultiplier = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearsWorking)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
@@ -65,15 +66,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGrossMinimumWage)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelYearsWorking
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Years Working";
+            this.labelYearsWorking.AutoSize = true;
+            this.labelYearsWorking.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelYearsWorking.Location = new System.Drawing.Point(39, 39);
+            this.labelYearsWorking.Name = "labelYearsWorking";
+            this.labelYearsWorking.Size = new System.Drawing.Size(96, 16);
+            this.labelYearsWorking.TabIndex = 0;
+            this.labelYearsWorking.Text = "Years Working";
             // 
             // label2
             // 
@@ -194,12 +195,12 @@
             this.checkBox3.UseVisualStyleBackColor = true;
             this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
-            // numericUpDown1
+            // numericUpDownYearsWorking
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(42, 58);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(49, 20);
-            this.numericUpDown1.TabIndex = 19;
+            this.numericUpDownYearsWorking.Location = new System.Drawing.Point(42, 58);
+            this.numericUpDownYearsWorking.Name = "numericUpDownYearsWorking";
+            this.numericUpDownYearsWorking.Size = new System.Drawing.Size(49, 20);
+            this.numericUpDownYearsWorking.TabIndex = 19;
             // 
             // numericUpDown2
             // 
@@ -336,18 +337,28 @@
             // labelBaseSalary
             // 
             this.labelBaseSalary.AutoSize = true;
-            this.labelBaseSalary.Location = new System.Drawing.Point(39, 385);
+            this.labelBaseSalary.Location = new System.Drawing.Point(39, 373);
             this.labelBaseSalary.Name = "labelBaseSalary";
             this.labelBaseSalary.Size = new System.Drawing.Size(206, 13);
             this.labelBaseSalary.TabIndex = 27;
             this.labelBaseSalary.Text = "Base Salary = Gross Minimum Wage * 2 = ";
             this.labelBaseSalary.Visible = false;
             // 
+            // labelTotalMultiplier
+            // 
+            this.labelTotalMultiplier.AutoSize = true;
+            this.labelTotalMultiplier.Location = new System.Drawing.Point(40, 398);
+            this.labelTotalMultiplier.Name = "labelTotalMultiplier";
+            this.labelTotalMultiplier.Size = new System.Drawing.Size(81, 13);
+            this.labelTotalMultiplier.TabIndex = 28;
+            this.labelTotalMultiplier.Text = "Total Multiplier: ";
+            // 
             // salary_calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelTotalMultiplier);
             this.Controls.Add(this.labelBaseSalary);
             this.Controls.Add(this.buttonCalculate);
             this.Controls.Add(this.label12);
@@ -356,7 +367,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericUpDownYearsWorking);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
@@ -369,10 +380,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxCities);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelYearsWorking);
             this.Name = "salary_calculator";
             this.Text = "Salary Calculator";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearsWorking)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -387,7 +398,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelYearsWorking;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxCities;
         private System.Windows.Forms.Label label3;
@@ -400,7 +411,7 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownYearsWorking;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -415,5 +426,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button buttonCalculate;
         private System.Windows.Forms.Label labelBaseSalary;
+        private System.Windows.Forms.Label labelTotalMultiplier;
     }
 }
