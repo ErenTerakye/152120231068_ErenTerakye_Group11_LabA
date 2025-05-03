@@ -15,6 +15,7 @@ namespace _152120231068_ErenTerakye_Group11_LabA
         decimal grossMinimumWage;
         decimal baseSalary;
         decimal totalMultiplier;
+        string cityOfResidence;
 
         public salary_calculator()
         {
@@ -116,6 +117,7 @@ namespace _152120231068_ErenTerakye_Group11_LabA
 
             grossMinimumWage = numericUpDownGrossMinimumWage.Value;
             baseSalary = grossMinimumWage * 2;
+            cityOfResidence = comboBoxCities.SelectedItem.ToString();
 
             labelBaseSalary.Visible = true;
             labelBaseSalary.Text = "Base Salary = Gross Minimum Wage * 2 = " +
@@ -123,40 +125,94 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                 baseSalary.ToString("F2") + " TL";
 
             labelTotalMultiplier.Text = "Total Multiplier: ";
+
+            // Adjusts the totalMultiplier based on years worked
             if (numericUpDownYearsWorking.Value >= 2 &&
                 numericUpDownYearsWorking.Value <= 4)
             {
                 totalMultiplier += 0.6m;
 
-                labelTotalMultiplier.Text += "0,60 (Years Working)";
+                labelTotalMultiplier.Text += "0,60 (Years Working) + ";
             }
             else if (numericUpDownYearsWorking.Value >= 5 &&
                 numericUpDownYearsWorking.Value <= 9)
             {
                 totalMultiplier += 1;
 
-                labelTotalMultiplier.Text += "1,00 (Years Working)";
+                labelTotalMultiplier.Text += "1,00 (Years Working) + ";
             }
             else if (numericUpDownYearsWorking.Value >= 10 &&
                 numericUpDownYearsWorking.Value <= 14)
             {
                 totalMultiplier += 1.2m;
 
-                labelTotalMultiplier.Text += "1,20 (Years Working)";
+                labelTotalMultiplier.Text += "1,20 (Years Working) + ";
             }
             else if (numericUpDownYearsWorking.Value >= 15 &&
                 numericUpDownYearsWorking.Value <= 20)
             {
                 totalMultiplier += 1.35m;
 
-                labelTotalMultiplier.Text += "1,35 (Years Working)";
+                labelTotalMultiplier.Text += "1,35 (Years Working) + ";
             }
             else if (numericUpDownYearsWorking.Value > 20)
             {
                 totalMultiplier += 1.5m;
 
-                labelTotalMultiplier.Text += "1,50 (Years Working)";
+                labelTotalMultiplier.Text += "1,50 (Years Working) + ";
             }
+
+            if (cityOfResidence == "İstanbul")
+            {
+                totalMultiplier += 0.3m;
+
+                labelTotalMultiplier.Text += "0,30 (" + cityOfResidence + ")";
+            }
+            else if (cityOfResidence == "Ankara" ||
+                cityOfResidence == "İzmir")
+            {
+                totalMultiplier += 0.2m;
+
+                labelTotalMultiplier.Text += "0,20 (" + cityOfResidence + ")";
+            }
+            else if (cityOfResidence == "Kocaeli" ||
+                cityOfResidence == "Sakarya" ||
+                cityOfResidence == "Düzce" ||
+                cityOfResidence == "Bolu" ||
+                cityOfResidence == "Yalova" ||
+                cityOfResidence == "Edirne" ||
+                cityOfResidence == "Kırklareli" ||
+                cityOfResidence == "Tekirdağ")
+            {
+                totalMultiplier += 0.1m;
+
+                labelTotalMultiplier.Text += "0,10 (" + cityOfResidence + ")";
+            }
+            else if (cityOfResidence == "Trabzon" ||
+                cityOfResidence == "Ordu" ||
+                cityOfResidence == "Giresun" ||
+                cityOfResidence == "Rize" ||
+                cityOfResidence == "Artvin" ||
+                cityOfResidence == "Gümüşhane" ||
+                cityOfResidence == "Bursa" ||
+                cityOfResidence == "Eskişehir" ||
+                cityOfResidence == "Bilecik" ||
+                cityOfResidence == "Aydın" ||
+                cityOfResidence == "Denizli" ||
+                cityOfResidence == "Muğla" ||
+                cityOfResidence == "Adana" ||
+                cityOfResidence == "Mersin" ||
+                cityOfResidence == "Balıkesir" ||
+                cityOfResidence == "Çanakkale" ||
+                cityOfResidence == "Antalya" ||
+                cityOfResidence == "Isparta" ||
+                cityOfResidence == "Burdur")
+            {
+                totalMultiplier += 0.05m;
+
+                labelTotalMultiplier.Text += "0,05 (" + cityOfResidence + ")";
+            }
+
         }
     }
 }
