@@ -16,6 +16,8 @@ namespace _152120231068_ErenTerakye_Group11_LabA
         decimal baseSalary;
         decimal totalMultiplier;
         string cityOfResidence;
+        string highestEducationLevel;
+        string managerialPosition;
 
         public salary_calculator()
         {
@@ -72,10 +74,15 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             List<string> positions = new List<string>
             {
                 "-",
-                "Team Lead / Group Manager / Technical Manager / Software Architect",
+                "Team Lead",
+                "Group Manager",
+                "Technical Manager",
+                "Software Architect",
                 "Project Manager",
-                "Director / Head of Projects",
-                "CTO (Chief Technology Officer) / CEO (Chief Executive Officer)",
+                "Director",
+                "Head of Projects",
+                "CTO (Chief Technology Officer)",
+                "CEO (Chief Executive Officer)",
                 "IT Officer / Manager (there are no more than 5 staff in the department)",
                 "IT Officer / Manager (there are more than 5 staff in the department)"
             };
@@ -118,6 +125,8 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             grossMinimumWage = numericUpDownGrossMinimumWage.Value;
             baseSalary = grossMinimumWage * 2;
             cityOfResidence = comboBoxCities.SelectedItem.ToString();
+            highestEducationLevel = comboBoxEducation.SelectedItem.ToString();
+            managerialPosition = comboBoxPosition.SelectedItem.ToString();
 
             labelBaseSalary.Visible = true;
             labelBaseSalary.Text = "Base Salary = Gross Minimum Wage * 2 = " +
@@ -162,18 +171,19 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                 labelTotalMultiplier.Text += "1,50 (Years Working) + ";
             }
 
+            // Adjusts the totalMultiplier based on the city of residence
             if (cityOfResidence == "İstanbul")
             {
                 totalMultiplier += 0.3m;
 
-                labelTotalMultiplier.Text += "0,30 (" + cityOfResidence + ")";
+                labelTotalMultiplier.Text += "0,30 (" + cityOfResidence + ") + ";
             }
             else if (cityOfResidence == "Ankara" ||
                 cityOfResidence == "İzmir")
             {
                 totalMultiplier += 0.2m;
 
-                labelTotalMultiplier.Text += "0,20 (" + cityOfResidence + ")";
+                labelTotalMultiplier.Text += "0,20 (" + cityOfResidence + ") + ";
             }
             else if (cityOfResidence == "Kocaeli" ||
                 cityOfResidence == "Sakarya" ||
@@ -186,7 +196,7 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             {
                 totalMultiplier += 0.1m;
 
-                labelTotalMultiplier.Text += "0,10 (" + cityOfResidence + ")";
+                labelTotalMultiplier.Text += "0,10 (" + cityOfResidence + ") + ";
             }
             else if (cityOfResidence == "Trabzon" ||
                 cityOfResidence == "Ordu" ||
@@ -210,7 +220,38 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             {
                 totalMultiplier += 0.05m;
 
-                labelTotalMultiplier.Text += "0,05 (" + cityOfResidence + ")";
+                labelTotalMultiplier.Text += "0,05 (" + cityOfResidence + ") + ";
+            }
+
+            if (highestEducationLevel == "Master’s Degree in a Relevant Field")
+            {
+                totalMultiplier += 0.1m;
+
+                labelTotalMultiplier.Text += "0,10 (Master's Degree) + ";
+            }
+            else if (highestEducationLevel == "PhD in a Relevant Field")
+            {
+                totalMultiplier += 0.3m;
+
+                labelTotalMultiplier.Text += "0,30 (PhD) + ";
+            }
+            else if (highestEducationLevel == "Associate Professorship in a Relevant Field")
+            {
+                totalMultiplier += 0.35m;
+
+                labelTotalMultiplier.Text += "0,35 (Associate Professorship) + ";
+            }
+            else if (highestEducationLevel == "Master’s Degree in an Unrelated Field")
+            {
+                totalMultiplier += 0.05m;
+
+                labelTotalMultiplier.Text += "0,05 (Associate Professorship in a Relevant Field) + ";
+            }
+            else if (highestEducationLevel == "PhD/Associate Professorship in an Unrelated Field") 
+            {
+                totalMultiplier += 0.15m;
+
+                labelTotalMultiplier.Text += "0,15 (PhD/Associate Professorship in an Unrelated Field)";
             }
 
         }
