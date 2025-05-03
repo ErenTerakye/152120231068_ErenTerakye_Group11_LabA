@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelYearsWorking = new System.Windows.Forms.Label();
+            this.labelYearsWorked = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxCities = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,11 +38,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxPosition = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.numericUpDownYearsWorking = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.checkBoxCertifiedEnglish = new System.Windows.Forms.CheckBox();
+            this.checkBoxGraduateOfEnglish = new System.Windows.Forms.CheckBox();
+            this.checkBoxCertifiedAdditional = new System.Windows.Forms.CheckBox();
+            this.numericUpDownYearsWorked = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownCertifiedAdditional = new System.Windows.Forms.NumericUpDown();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -57,8 +57,8 @@
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.labelBaseSalary = new System.Windows.Forms.Label();
             this.labelTotalMultiplier = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearsWorking)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearsWorked)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCertifiedAdditional)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
@@ -66,15 +66,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGrossMinimumWage)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelYearsWorking
+            // labelYearsWorked
             // 
-            this.labelYearsWorking.AutoSize = true;
-            this.labelYearsWorking.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelYearsWorking.Location = new System.Drawing.Point(39, 39);
-            this.labelYearsWorking.Name = "labelYearsWorking";
-            this.labelYearsWorking.Size = new System.Drawing.Size(96, 16);
-            this.labelYearsWorking.TabIndex = 0;
-            this.labelYearsWorking.Text = "Years Working";
+            this.labelYearsWorked.AutoSize = true;
+            this.labelYearsWorked.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelYearsWorked.Location = new System.Drawing.Point(39, 39);
+            this.labelYearsWorked.Name = "labelYearsWorked";
+            this.labelYearsWorked.Size = new System.Drawing.Size(94, 16);
+            this.labelYearsWorked.TabIndex = 0;
+            this.labelYearsWorked.Text = "Years Worked";
             // 
             // label2
             // 
@@ -163,52 +163,52 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Marital Status";
             // 
-            // checkBox1
+            // checkBoxCertifiedEnglish
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(42, 221);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(156, 17);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Certified English Proficiency";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxCertifiedEnglish.AutoSize = true;
+            this.checkBoxCertifiedEnglish.Location = new System.Drawing.Point(42, 221);
+            this.checkBoxCertifiedEnglish.Name = "checkBoxCertifiedEnglish";
+            this.checkBoxCertifiedEnglish.Size = new System.Drawing.Size(156, 17);
+            this.checkBoxCertifiedEnglish.TabIndex = 16;
+            this.checkBoxCertifiedEnglish.Text = "Certified English Proficiency";
+            this.checkBoxCertifiedEnglish.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkBoxGraduateOfEnglish
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(42, 244);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(213, 17);
-            this.checkBox2.TabIndex = 17;
-            this.checkBox2.Text = "Graduate of an English-Taught Program";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.checkBoxGraduateOfEnglish.AutoSize = true;
+            this.checkBoxGraduateOfEnglish.Location = new System.Drawing.Point(42, 244);
+            this.checkBoxGraduateOfEnglish.Name = "checkBoxGraduateOfEnglish";
+            this.checkBoxGraduateOfEnglish.Size = new System.Drawing.Size(213, 17);
+            this.checkBoxGraduateOfEnglish.TabIndex = 17;
+            this.checkBoxGraduateOfEnglish.Text = "Graduate of an English-Taught Program";
+            this.checkBoxGraduateOfEnglish.UseVisualStyleBackColor = true;
+            this.checkBoxGraduateOfEnglish.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
-            // checkBox3
+            // checkBoxCertifiedAdditional
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(42, 267);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(275, 17);
-            this.checkBox3.TabIndex = 18;
-            this.checkBox3.Text = "Certified Knowledge of Additional Foreign Languages";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.checkBoxCertifiedAdditional.AutoSize = true;
+            this.checkBoxCertifiedAdditional.Location = new System.Drawing.Point(42, 267);
+            this.checkBoxCertifiedAdditional.Name = "checkBoxCertifiedAdditional";
+            this.checkBoxCertifiedAdditional.Size = new System.Drawing.Size(275, 17);
+            this.checkBoxCertifiedAdditional.TabIndex = 18;
+            this.checkBoxCertifiedAdditional.Text = "Certified Knowledge of Additional Foreign Languages";
+            this.checkBoxCertifiedAdditional.UseVisualStyleBackColor = true;
+            this.checkBoxCertifiedAdditional.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
-            // numericUpDownYearsWorking
+            // numericUpDownYearsWorked
             // 
-            this.numericUpDownYearsWorking.Location = new System.Drawing.Point(42, 58);
-            this.numericUpDownYearsWorking.Name = "numericUpDownYearsWorking";
-            this.numericUpDownYearsWorking.Size = new System.Drawing.Size(49, 20);
-            this.numericUpDownYearsWorking.TabIndex = 19;
+            this.numericUpDownYearsWorked.Location = new System.Drawing.Point(42, 58);
+            this.numericUpDownYearsWorked.Name = "numericUpDownYearsWorked";
+            this.numericUpDownYearsWorked.Size = new System.Drawing.Size(49, 20);
+            this.numericUpDownYearsWorked.TabIndex = 19;
             // 
-            // numericUpDown2
+            // numericUpDownCertifiedAdditional
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(61, 313);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(49, 20);
-            this.numericUpDown2.TabIndex = 20;
-            this.numericUpDown2.Visible = false;
+            this.numericUpDownCertifiedAdditional.Location = new System.Drawing.Point(61, 313);
+            this.numericUpDownCertifiedAdditional.Name = "numericUpDownCertifiedAdditional";
+            this.numericUpDownCertifiedAdditional.Size = new System.Drawing.Size(49, 20);
+            this.numericUpDownCertifiedAdditional.TabIndex = 20;
+            this.numericUpDownCertifiedAdditional.Visible = false;
             // 
             // checkBox4
             // 
@@ -346,10 +346,9 @@
             // 
             // labelTotalMultiplier
             // 
-            this.labelTotalMultiplier.AutoSize = true;
             this.labelTotalMultiplier.Location = new System.Drawing.Point(40, 398);
             this.labelTotalMultiplier.Name = "labelTotalMultiplier";
-            this.labelTotalMultiplier.Size = new System.Drawing.Size(81, 13);
+            this.labelTotalMultiplier.Size = new System.Drawing.Size(409, 43);
             this.labelTotalMultiplier.TabIndex = 28;
             this.labelTotalMultiplier.Text = "Total Multiplier: ";
             // 
@@ -366,11 +365,11 @@
             this.Controls.Add(this.numericUpDownGrossMinimumWage);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDownYearsWorking);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.numericUpDownCertifiedAdditional);
+            this.Controls.Add(this.numericUpDownYearsWorked);
+            this.Controls.Add(this.checkBoxCertifiedAdditional);
+            this.Controls.Add(this.checkBoxGraduateOfEnglish);
+            this.Controls.Add(this.checkBoxCertifiedEnglish);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBoxPosition);
             this.Controls.Add(this.label6);
@@ -380,11 +379,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxCities);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.labelYearsWorking);
+            this.Controls.Add(this.labelYearsWorked);
             this.Name = "salary_calculator";
             this.Text = "Salary Calculator";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearsWorking)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearsWorked)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCertifiedAdditional)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
@@ -398,7 +397,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelYearsWorking;
+        private System.Windows.Forms.Label labelYearsWorked;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxCities;
         private System.Windows.Forms.Label label3;
@@ -408,11 +407,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxPosition;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDownYearsWorking;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.CheckBox checkBoxCertifiedEnglish;
+        private System.Windows.Forms.CheckBox checkBoxGraduateOfEnglish;
+        private System.Windows.Forms.CheckBox checkBoxCertifiedAdditional;
+        private System.Windows.Forms.NumericUpDown numericUpDownYearsWorked;
+        private System.Windows.Forms.NumericUpDown numericUpDownCertifiedAdditional;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label10;
