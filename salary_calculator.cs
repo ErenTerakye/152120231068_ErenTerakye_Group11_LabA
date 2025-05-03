@@ -19,6 +19,10 @@ namespace _152120231068_ErenTerakye_Group11_LabA
         string cityOfResidence;
         string highestEducationLevel;
         string managerialPosition;
+        int childrenZeroToSix;
+        int childrenSevenToEighteen;
+        int childrenOverEighteen;
+
 
         public salary_calculator()
         {
@@ -129,6 +133,10 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             cityOfResidence = comboBoxCities.SelectedItem.ToString();
             highestEducationLevel = comboBoxEducation.SelectedItem.ToString();
             managerialPosition = comboBoxPosition.SelectedItem.ToString();
+            childrenZeroToSix = (int)numericUpDownZeroToSix.Value;
+            childrenSevenToEighteen = (int)numericUpDownSevenToEighteen.Value;
+            childrenOverEighteen = (int)numericUpDownOverEighteen.Value;
+
 
             labelBaseSalary.Visible = true;
             labelBaseSalary.Text = "Base Salary = Gross Minimum Wage * 2 = " +
@@ -257,6 +265,7 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                 labelTotalMultiplier.Text += "0,15 (PhD/Associate Professorship in an Unrelated Field)";
             }
 
+            // Adjusts the totalMultiplier based on English proficiency
             if (checkBoxCertifiedEnglish.Checked || checkBoxGraduateOfEnglish.Checked)
             {
                 totalMultiplier += 0.2m;
@@ -316,6 +325,45 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                 labelTotalMultiplier.Text += "0,60 (IT Officer / Manager - >5 Staff)";
             }
 
+            // Family allowance is reflected in the wage calculation by taking into account a maximum of two children for whom the individual is responsible. The coefficients are applied based on the two oldest children among those eligible. Among children over the age of eighteen, only those who are continuing their associate or bachelor's degree education are included in the calculation. Family status coefficient: Married and spouse is not working 0.20, Child aged zero to six 0.20, Child aged seven to eighteen 0.30, Child over eighteen only if a university undergraduate or associate degree student 0.40.
+            if (checkBoxMarried.Checked)
+            {
+                totalMultiplier += 0.2m;
+                labelTotalMultiplier.Text += "0,20 (Married and Spouse is not Working)";
+            }
+
+            // Calculate the allowence for children based on the oldest 2 children
+            List<decimal> childCoefficients = new List<decimal>();
+
+            for (int i = 0; i < childrenZeroToSix; i++)
+            {
+                childCoefficients.Add(0.20m);
+            }
+
+            for (int i = 0; i < childrenSevenToEighteen; i++)
+            {
+                childCoefficients.Add(0.30m);
+            }
+
+            for (int i = 0; i < childrenOverEighteen; i++)
+            {
+                childCoefficients.Add(0.40m);
+            }
+
+            // Sort the coefficients in descending order to prioritize the oldest children
+            childCoefficients.Sort((a, b) => b.CompareTo(a));
+
+            decimal childAllowance = 0;
+            for (int i = 0; i < Math.Min(2, childCoefficients.Count); i++)
+            {
+                childAllowance += childCoefficients[i];
+            }
+
+            totalMultiplier += childAllowance;
+            if (childAllowance > 0)
+            {
+                labelTotalMultiplier.Text += childAllowance.ToString("F2") + " (Child Allowance)";
+            }
         }
     }
 }

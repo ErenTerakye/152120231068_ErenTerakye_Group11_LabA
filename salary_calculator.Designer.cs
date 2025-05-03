@@ -43,14 +43,14 @@
             this.checkBoxCertifiedAdditional = new System.Windows.Forms.CheckBox();
             this.numericUpDownYearsWorked = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownCertifiedAdditional = new System.Windows.Forms.NumericUpDown();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBoxMarried = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.labelOverEighteen = new System.Windows.Forms.Label();
+            this.numericUpDownOverEighteen = new System.Windows.Forms.NumericUpDown();
+            this.labelSevenToEighteen = new System.Windows.Forms.Label();
+            this.numericUpDownSevenToEighteen = new System.Windows.Forms.NumericUpDown();
+            this.labelZeroToSix = new System.Windows.Forms.Label();
+            this.numericUpDownZeroToSix = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownGrossMinimumWage = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,9 +60,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearsWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCertifiedAdditional)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOverEighteen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSevenToEighteen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZeroToSix)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGrossMinimumWage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,24 +210,24 @@
             this.numericUpDownCertifiedAdditional.TabIndex = 20;
             this.numericUpDownCertifiedAdditional.Visible = false;
             // 
-            // checkBox4
+            // checkBoxMarried
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(456, 106);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(168, 17);
-            this.checkBox4.TabIndex = 21;
-            this.checkBox4.Text = "Married (Spouse Unemployed)";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBoxMarried.AutoSize = true;
+            this.checkBoxMarried.Location = new System.Drawing.Point(456, 106);
+            this.checkBoxMarried.Name = "checkBoxMarried";
+            this.checkBoxMarried.Size = new System.Drawing.Size(168, 17);
+            this.checkBoxMarried.TabIndex = 21;
+            this.checkBoxMarried.Text = "Married (Spouse Unemployed)";
+            this.checkBoxMarried.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.numericUpDown5);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.numericUpDown4);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.numericUpDown3);
+            this.groupBox1.Controls.Add(this.labelOverEighteen);
+            this.groupBox1.Controls.Add(this.numericUpDownOverEighteen);
+            this.groupBox1.Controls.Add(this.labelSevenToEighteen);
+            this.groupBox1.Controls.Add(this.numericUpDownSevenToEighteen);
+            this.groupBox1.Controls.Add(this.labelZeroToSix);
+            this.groupBox1.Controls.Add(this.numericUpDownZeroToSix);
             this.groupBox1.Location = new System.Drawing.Point(455, 129);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(177, 109);
@@ -235,52 +235,52 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Number of Children";
             // 
-            // label10
+            // labelOverEighteen
             // 
-            this.label10.Location = new System.Drawing.Point(15, 73);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 33);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "18+ University Student:";
+            this.labelOverEighteen.Location = new System.Drawing.Point(15, 73);
+            this.labelOverEighteen.Name = "labelOverEighteen";
+            this.labelOverEighteen.Size = new System.Drawing.Size(91, 33);
+            this.labelOverEighteen.TabIndex = 5;
+            this.labelOverEighteen.Text = "18+ University Student:";
             // 
-            // numericUpDown5
+            // numericUpDownOverEighteen
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(112, 71);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(42, 20);
-            this.numericUpDown5.TabIndex = 4;
+            this.numericUpDownOverEighteen.Location = new System.Drawing.Point(112, 71);
+            this.numericUpDownOverEighteen.Name = "numericUpDownOverEighteen";
+            this.numericUpDownOverEighteen.Size = new System.Drawing.Size(42, 20);
+            this.numericUpDownOverEighteen.TabIndex = 4;
             // 
-            // label9
+            // labelSevenToEighteen
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 47);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 13);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Ages 7-18:";
+            this.labelSevenToEighteen.AutoSize = true;
+            this.labelSevenToEighteen.Location = new System.Drawing.Point(15, 47);
+            this.labelSevenToEighteen.Name = "labelSevenToEighteen";
+            this.labelSevenToEighteen.Size = new System.Drawing.Size(58, 13);
+            this.labelSevenToEighteen.TabIndex = 3;
+            this.labelSevenToEighteen.Text = "Ages 7-18:";
             // 
-            // numericUpDown4
+            // numericUpDownSevenToEighteen
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(112, 45);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(42, 20);
-            this.numericUpDown4.TabIndex = 2;
+            this.numericUpDownSevenToEighteen.Location = new System.Drawing.Point(112, 45);
+            this.numericUpDownSevenToEighteen.Name = "numericUpDownSevenToEighteen";
+            this.numericUpDownSevenToEighteen.Size = new System.Drawing.Size(42, 20);
+            this.numericUpDownSevenToEighteen.TabIndex = 2;
             // 
-            // label8
+            // labelZeroToSix
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 21);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Ages 0–6:";
+            this.labelZeroToSix.AutoSize = true;
+            this.labelZeroToSix.Location = new System.Drawing.Point(15, 21);
+            this.labelZeroToSix.Name = "labelZeroToSix";
+            this.labelZeroToSix.Size = new System.Drawing.Size(54, 13);
+            this.labelZeroToSix.TabIndex = 1;
+            this.labelZeroToSix.Text = "Ages 0–6:";
             // 
-            // numericUpDown3
+            // numericUpDownZeroToSix
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(112, 19);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(42, 20);
-            this.numericUpDown3.TabIndex = 0;
+            this.numericUpDownZeroToSix.Location = new System.Drawing.Point(112, 19);
+            this.numericUpDownZeroToSix.Name = "numericUpDownZeroToSix";
+            this.numericUpDownZeroToSix.Size = new System.Drawing.Size(42, 20);
+            this.numericUpDownZeroToSix.TabIndex = 0;
             // 
             // numericUpDownGrossMinimumWage
             // 
@@ -364,7 +364,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.numericUpDownGrossMinimumWage);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkBoxMarried);
             this.Controls.Add(this.numericUpDownCertifiedAdditional);
             this.Controls.Add(this.numericUpDownYearsWorked);
             this.Controls.Add(this.checkBoxCertifiedAdditional);
@@ -386,9 +386,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCertifiedAdditional)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOverEighteen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSevenToEighteen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZeroToSix)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGrossMinimumWage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -412,14 +412,14 @@
         private System.Windows.Forms.CheckBox checkBoxCertifiedAdditional;
         private System.Windows.Forms.NumericUpDown numericUpDownYearsWorked;
         private System.Windows.Forms.NumericUpDown numericUpDownCertifiedAdditional;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBoxMarried;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.Label labelOverEighteen;
+        private System.Windows.Forms.NumericUpDown numericUpDownOverEighteen;
+        private System.Windows.Forms.Label labelSevenToEighteen;
+        private System.Windows.Forms.NumericUpDown numericUpDownSevenToEighteen;
+        private System.Windows.Forms.Label labelZeroToSix;
+        private System.Windows.Forms.NumericUpDown numericUpDownZeroToSix;
         private System.Windows.Forms.NumericUpDown numericUpDownGrossMinimumWage;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
