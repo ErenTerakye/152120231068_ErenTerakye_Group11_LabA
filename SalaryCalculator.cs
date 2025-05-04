@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace _152120231068_ErenTerakye_Group11_LabA
 {
-    public partial class salary_calculator : Form
+    public partial class SalaryCalculator : Form
     {
         decimal grossMinimumWage;
         decimal baseSalary;
@@ -25,7 +25,7 @@ namespace _152120231068_ErenTerakye_Group11_LabA
         int childrenOverEighteen;
 
 
-        public salary_calculator()
+        public SalaryCalculator()
         {
             InitializeComponent();
             FillCityCombobox();

@@ -1,6 +1,6 @@
 ﻿namespace _152120231068_ErenTerakye_Group11_LabA
 {
-    partial class salary_calculator
+    partial class SalaryCalculator
     {
         /// <summary>
         /// Required designer variable.
