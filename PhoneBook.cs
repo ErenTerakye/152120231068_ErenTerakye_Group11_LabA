@@ -129,6 +129,17 @@ namespace _152120231068_ErenTerakye_Group11_LabA
 
                 // Increment id for the next entry
                 id++;
+
+                textBoxName.Clear();
+                textBoxSurname.Clear();
+                textBoxPhone.Clear();
+                textBoxAddress.Clear();
+                textBoxDescription.Clear();
+                textBoxEmail.Clear();
+                dataGridViewPhoneBook.ClearSelection();
+
+
+                MessageBox.Show("Contact added successfully.");
             }
             else
             {
@@ -152,6 +163,15 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                 selectedRow.Cells["Email"].Value = textBoxEmail.Text;
 
                 UpdateCSV(id, textBoxName.Text, textBoxSurname.Text, textBoxPhone.Text, textBoxAddress.Text, textBoxDescription.Text, textBoxEmail.Text);
+
+                textBoxName.Clear();
+                textBoxSurname.Clear();
+                textBoxPhone.Clear();
+                textBoxAddress.Clear();
+                textBoxDescription.Clear();
+                textBoxEmail.Clear();
+                dataGridViewPhoneBook.ClearSelection();
+
                 MessageBox.Show("Contact updated successfully.");
             }
             else
@@ -168,7 +188,17 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                 string id = selectedRow.Cells["Number"].Value.ToString();
 
                 dataGridViewPhoneBook.Rows.Remove(selectedRow);
+
                 DeleteFromCSV(id);
+
+                textBoxName.Clear();
+                textBoxSurname.Clear();
+                textBoxPhone.Clear();
+                textBoxAddress.Clear();
+                textBoxDescription.Clear();
+                textBoxEmail.Clear();
+                dataGridViewPhoneBook.ClearSelection();
+
                 MessageBox.Show("Contact deleted successfully.");
             }
             else
