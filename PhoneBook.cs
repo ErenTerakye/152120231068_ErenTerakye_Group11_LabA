@@ -27,7 +27,12 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                 foreach (var line in lines)
                 {
                     var values = line.Split(',');
-                    if (values.Length == 7)
+
+                    if (values[0] == "id" && values[1] == "name" && values[2] == "surname" && values[3] == "phoneNumber" && values[4] == "address" && values[5] == "description" && values[6] == "email")
+                    {
+                        continue;
+                    }
+                    else if (values.Length == 7)
                     {
                         dataGridViewPhoneBook.Rows.Add(values);
                     }
