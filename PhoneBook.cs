@@ -221,5 +221,46 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                 textBoxEmail.Text = selectedRow.Cells["Email"].Value?.ToString();
             }
         }
+
+        private void textBoxPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+
+            string rawNumber = new string(textBoxPhone.Text.Where(char.IsDigit).ToArray());
+
+            if (!char.IsControl(e.KeyChar) && rawNumber.Length + 1 > 10)
+            {
+                e.Handled = true;
+                return;
+            }
+
+            // If the key is a digit, format manually
+            if (char.IsDigit(e.KeyChar))
+            {
+                rawNumber += e.KeyChar;
+
+                string formatted = FormatPhoneNumber(rawNumber);
+                textBoxPhone.Text = formatted;
+                textBoxPhone.SelectionStart = textBoxPhone.Text.Length;
+                e.Handled = true;
+            }
+        }
+
+        // Helper method to format digits as (XXX) XXX XX XX
+        private string FormatPhoneNumber(string raw)
+        {
+            if (raw.Length <= 3)
+                return "(" + raw;
+            else if (raw.Length <= 6)
+                return "(" + raw.Substring(0, 3) + ") " + raw.Substring(3);
+            else if (raw.Length <= 8)
+                return "(" + raw.Substring(0, 3) + ") " + raw.Substring(3, 3) + " " + raw.Substring(6);
+            else
+                return "(" + raw.Substring(0, 3) + ") " + raw.Substring(3, 3) + " " + raw.Substring(6, 2) + " " + raw.Substring(8);
+        }
     }
 }
