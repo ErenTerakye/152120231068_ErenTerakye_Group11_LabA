@@ -1,4 +1,4 @@
-namespace oopproje
+namespace Reminder
 {
     internal static class Program
     {
