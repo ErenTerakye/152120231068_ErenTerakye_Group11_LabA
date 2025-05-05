@@ -35,6 +35,12 @@ namespace _152120231068_ErenTerakye_Group11_LabA
                     else if (values.Length == 7)
                     {
                         dataGridViewPhoneBook.Rows.Add(values);
+
+                        // Update the highest ID
+                        if (int.TryParse(values[0], out int parsedId) && parsedId > id)
+                        {
+                            id = parsedId;
+                        }
                     }
                 }
             }
@@ -42,6 +48,9 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             {
                 MessageBox.Show("CSV file not found. A new file will be created.");
             }
+
+            // Increment id to start from the next available ID
+            id++;
         }
 
         private bool IsValidEmail(string email)
@@ -57,7 +66,6 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             return Regex.IsMatch(phoneNumber, pattern);
         }
 
-        // Crate SaveToCSV method for buttonAdd_Click
         private void SaveToCSV(string id, string name, string surname, string phoneNumber, string address, string description, string email)
         {
             string filePath = "phonebook.csv";
@@ -82,7 +90,6 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             System.IO.File.WriteAllLines(filePath, lines);
         }
 
-        // Create delete method for the selected row's id for buttonDelete_Click
         private void DeleteFromCSV(string id)
         {
             string filePath = "phonebook.csv";
@@ -110,16 +117,25 @@ namespace _152120231068_ErenTerakye_Group11_LabA
 
             if (IsValidEmail(email) && IsValidPhoneNumber(phoneNumber))
             {
-                id++;
+                // Ensure the ID is unique
+                while (dataGridViewPhoneBook.Rows.Cast<DataGridViewRow>()
+                    .Any(row => row.Cells[0].Value?.ToString() == id.ToString()))
+                {
+                    id++;
+                }
+
                 dataGridViewPhoneBook.Rows.Add(id.ToString(), name, surname, phoneNumber, address, description, email);
+                SaveToCSV(id.ToString(), name, surname, phoneNumber, address, description, email);
+
+                // Increment id for the next entry
+                id++;
             }
             else
             {
                 MessageBox.Show("Invalid email or phone number format.");
             }
-
-            SaveToCSV(id.ToString(), name, surname, phoneNumber, address, description, email);
         }
+
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
