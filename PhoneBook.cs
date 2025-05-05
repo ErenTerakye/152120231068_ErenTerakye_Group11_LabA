@@ -18,9 +18,26 @@ namespace _152120231068_ErenTerakye_Group11_LabA
         public PhoneBook()
         {
             InitializeComponent();
+
+            // Load data from CSV file into DataGridView
+            string filePath = "phonebook.csv";
+            if (System.IO.File.Exists(filePath))
+            {
+                var lines = System.IO.File.ReadAllLines(filePath);
+                foreach (var line in lines)
+                {
+                    var values = line.Split(',');
+                    if (values.Length == 7)
+                    {
+                        dataGridViewPhoneBook.Rows.Add(values);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("CSV file not found. A new file will be created.");
+            }
         }
-
-
 
         private bool IsValidEmail(string email)
         {
@@ -60,12 +77,19 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             System.IO.File.WriteAllLines(filePath, lines);
         }
 
-        // Create delete method for buttonDelete_Click
+        // Create delete method for the selected row's id for buttonDelete_Click
         private void DeleteFromCSV(string id)
         {
             string filePath = "phonebook.csv";
             var lines = System.IO.File.ReadAllLines(filePath).ToList();
-            lines.RemoveAll(line => line.StartsWith(id + ","));
+            for (int i = 0; i < lines.Count; i++)
+            {
+                if (lines[i].StartsWith(id + ","))
+                {
+                    lines.RemoveAt(i);
+                    break;
+                }
+            }
             System.IO.File.WriteAllLines(filePath, lines);
         }
 
@@ -97,20 +121,22 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             if (dataGridViewPhoneBook.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dataGridViewPhoneBook.SelectedRows[0];
+                string id = selectedRow.Cells["Number"].Value.ToString();
+
                 selectedRow.Cells["Name"].Value = textBoxName.Text;
                 selectedRow.Cells["Surname"].Value = textBoxSurname.Text;
                 selectedRow.Cells["PhoneNumber"].Value = textBoxPhone.Text;
                 selectedRow.Cells["Address"].Value = textBoxAddress.Text;
                 selectedRow.Cells["Description"].Value = textBoxDescription.Text;
                 selectedRow.Cells["Email"].Value = textBoxEmail.Text;
+
+                UpdateCSV(id, textBoxName.Text, textBoxSurname.Text, textBoxPhone.Text, textBoxAddress.Text, textBoxDescription.Text, textBoxEmail.Text);
                 MessageBox.Show("Contact updated successfully.");
             }
             else
             {
                 MessageBox.Show("Please select a contact to update.");
             }
-
-            UpdateCSV(id.ToString(), textBoxName.Text, textBoxSurname.Text, textBoxPhone.Text, textBoxAddress.Text, textBoxDescription.Text, textBoxEmail.Text);
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -118,15 +144,31 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             if (dataGridViewPhoneBook.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dataGridViewPhoneBook.SelectedRows[0];
+                string id = selectedRow.Cells["Number"].Value.ToString();
+
                 dataGridViewPhoneBook.Rows.Remove(selectedRow);
+                DeleteFromCSV(id);
                 MessageBox.Show("Contact deleted successfully.");
             }
             else
             {
                 MessageBox.Show("Please select a contact to delete.");
             }
+        }
 
-            DeleteFromCSV(id.ToString());
+        private void dataGridViewPhoneBook_SelectionChanged_1(object sender, EventArgs e)
+        {
+            if (dataGridViewPhoneBook.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridViewPhoneBook.SelectedRows[0];
+
+                textBoxName.Text = selectedRow.Cells["Name"].Value?.ToString();
+                textBoxSurname.Text = selectedRow.Cells["Surname"].Value?.ToString();
+                textBoxPhone.Text = selectedRow.Cells["PhoneNumber"].Value?.ToString();
+                textBoxAddress.Text = selectedRow.Cells["Address"].Value?.ToString();
+                textBoxDescription.Text = selectedRow.Cells["Description"].Value?.ToString();
+                textBoxEmail.Text = selectedRow.Cells["Email"].Value?.ToString();
+            }
         }
     }
 }

@@ -56,6 +56,11 @@
             // 
             // dataGridViewPhoneBook
             // 
+            this.dataGridViewPhoneBook.AllowUserToAddRows = false;
+            this.dataGridViewPhoneBook.AllowUserToDeleteRows = false;
+            this.dataGridViewPhoneBook.AllowUserToResizeColumns = false;
+            this.dataGridViewPhoneBook.AllowUserToResizeRows = false;
+            this.dataGridViewPhoneBook.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewPhoneBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPhoneBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.number,
@@ -69,6 +74,7 @@
             this.dataGridViewPhoneBook.Name = "dataGridViewPhoneBook";
             this.dataGridViewPhoneBook.Size = new System.Drawing.Size(673, 215);
             this.dataGridViewPhoneBook.TabIndex = 0;
+            this.dataGridViewPhoneBook.SelectionChanged += new System.EventHandler(this.dataGridViewPhoneBook_SelectionChanged_1);
             // 
             // labelName
             // 
@@ -198,7 +204,7 @@
             // 
             // number
             // 
-            this.number.HeaderText = "#";
+            this.number.HeaderText = "ID";
             this.number.Name = "number";
             this.number.Width = 30;
             // 
