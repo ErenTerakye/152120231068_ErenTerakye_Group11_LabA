@@ -8,4 +8,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Observer\**" />
+    <EmbeddedResource Remove="Observer\**" />
+    <None Remove="Observer\**" />
+  </ItemGroup>
+
 </Project>

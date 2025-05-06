@@ -19,6 +19,8 @@ namespace _152120231068_ErenTerakye_Group11_LabA
         {
             InitializeComponent();
 
+            SynchronizePhoneBookWithUsers();
+
             // Load data from CSV file into DataGridView
             string filePath = "phonebook.csv";
             if (System.IO.File.Exists(filePath))
@@ -52,6 +54,52 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             // Increment id to start from the next available ID
             id++;
         }
+
+        private void SynchronizePhoneBookWithUsers()
+        {
+            string phonebookPath = "phonebook.csv";
+            string usersPath = "users.csv";
+
+            var existingEmails = new HashSet<string>();
+            var phonebookLines = new List<string>();
+
+            if (System.IO.File.Exists(phonebookPath))
+            {
+                phonebookLines = System.IO.File.ReadAllLines(phonebookPath).ToList();
+                foreach (var line in phonebookLines.Skip(1)) // Skip header
+                {
+                    var fields = line.Split(',');
+                    if (fields.Length >= 7)
+                        existingEmails.Add(fields[6].Trim()); // Email
+                }
+            }
+            else
+            {
+                // Create header if file doesn't exist
+                System.IO.File.WriteAllText(phonebookPath, "id,name,surname,phoneNumber,address,description,email\n");
+            }
+
+            if (System.IO.File.Exists(usersPath))
+            {
+                var userLines = System.IO.File.ReadAllLines(usersPath).Skip(1); // Skip header
+                foreach (var line in userLines)
+                {
+                    var userFields = line.Split(',');
+                    if (userFields.Length < 3) continue;
+
+                    string email = userFields[2].Trim();
+
+                    if (!existingEmails.Contains(email))
+                    {
+                        id++; // Increment ID
+                        string newEntry = $"{id},,,(000) 000 00 00,,, {email}";
+                        System.IO.File.AppendAllText(phonebookPath, newEntry + "\n");
+                        dataGridViewPhoneBook.Rows.Add(id.ToString(), "", "", "(000) 000 00 00", "", "", email);
+                    }
+                }
+            }
+        }
+
 
         private bool IsValidEmail(string email)
         {
