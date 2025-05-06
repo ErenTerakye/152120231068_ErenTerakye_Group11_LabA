@@ -367,10 +367,27 @@ namespace _152120231068_ErenTerakye_Group11_LabA
             if (isLabelUpdated) labelTotalMultiplier.Text += " = " + totalMultiplier.ToString("F2");
             else labelTotalMultiplier.Text += totalMultiplier.ToString("F2");
 
-            minimumGrossSalary = baseSalary * (totalMultiplier + 1);
+            if (checkBoxPartTime.Checked)
+            {
+                minimumGrossSalary = (baseSalary * (totalMultiplier + 1)) / 2;
+            }
+            else
+            {
+                minimumGrossSalary = baseSalary * (totalMultiplier + 1);
+
+            }
             labelMinimumGrossSalary.Visible = true;
-            labelMinimumGrossSalary.Text = "Minimum Monthly Gross Salary = Base Salary x (" + totalMultiplier.ToString("F2") + " + 1) = " + baseSalary.ToString("F2") + " x (" +
-                totalMultiplier.ToString("F2") + " + 1) = " + minimumGrossSalary.ToString("F2") + " TL";
+            if (checkBoxPartTime.Checked)
+            {
+                labelMinimumGrossSalary.Text = "Minimum Monthly Gross Salary = [Base Salary x (" + totalMultiplier.ToString("F2") + " + 1)] / 2 = [" + baseSalary.ToString("F2") + " x (" +
+    totalMultiplier.ToString("F2") + " + 1)] / 2 = " + minimumGrossSalary.ToString("F2") + " TL";
+            }
+            else
+            {
+                labelMinimumGrossSalary.Text = "Minimum Monthly Gross Salary = Base Salary x (" + totalMultiplier.ToString("F2") + " + 1) = " + baseSalary.ToString("F2") + " x (" +
+    totalMultiplier.ToString("F2") + " + 1) = " + minimumGrossSalary.ToString("F2") + " TL";
+            }
+
         }
     }
 }

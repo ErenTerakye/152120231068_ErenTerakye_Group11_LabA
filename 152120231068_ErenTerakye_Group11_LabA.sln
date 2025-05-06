@@ -5,8 +5,6 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "152120231068_ErenTerakye_Group11_LabA", "152120231068_ErenTerakye_Group11_LabA.csproj", "{5E31BF77-556B-4079-81E7-D08CAD9F64CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "userManagement", "userManagement\userManagement.csproj", "{4FB2891D-DF8D-4E7A-8A66-2ED01E1E87C6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{5E31BF77-556B-4079-81E7-D08CAD9F64CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E31BF77-556B-4079-81E7-D08CAD9F64CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E31BF77-556B-4079-81E7-D08CAD9F64CB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4FB2891D-DF8D-4E7A-8A66-2ED01E1E87C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FB2891D-DF8D-4E7A-8A66-2ED01E1E87C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4FB2891D-DF8D-4E7A-8A66-2ED01E1E87C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4FB2891D-DF8D-4E7A-8A66-2ED01E1E87C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

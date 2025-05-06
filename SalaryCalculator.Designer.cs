@@ -58,6 +58,7 @@
             this.labelBaseSalary = new System.Windows.Forms.Label();
             this.labelTotalMultiplier = new System.Windows.Forms.Label();
             this.labelMinimumGrossSalary = new System.Windows.Forms.Label();
+            this.checkBoxPartTime = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearsWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCertifiedAdditional)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -363,11 +364,22 @@
             this.labelMinimumGrossSalary.Text = "Minimum Monthly Gross Salary = ";
             this.labelMinimumGrossSalary.Visible = false;
             // 
-            // salary_calculator
+            // checkBoxPartTime
+            // 
+            this.checkBoxPartTime.AutoSize = true;
+            this.checkBoxPartTime.Location = new System.Drawing.Point(273, 57);
+            this.checkBoxPartTime.Name = "checkBoxPartTime";
+            this.checkBoxPartTime.Size = new System.Drawing.Size(67, 17);
+            this.checkBoxPartTime.TabIndex = 30;
+            this.checkBoxPartTime.Text = "Part-time";
+            this.checkBoxPartTime.UseVisualStyleBackColor = true;
+            // 
+            // SalaryCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.checkBoxPartTime);
             this.Controls.Add(this.labelMinimumGrossSalary);
             this.Controls.Add(this.labelTotalMultiplier);
             this.Controls.Add(this.labelBaseSalary);
@@ -392,7 +404,7 @@
             this.Controls.Add(this.comboBoxCities);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelYearsWorked);
-            this.Name = "salary_calculator";
+            this.Name = "SalaryCalculator";
             this.Text = "Salary Calculator";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearsWorked)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCertifiedAdditional)).EndInit();
@@ -439,5 +451,6 @@
         private System.Windows.Forms.Label labelBaseSalary;
         private System.Windows.Forms.Label labelTotalMultiplier;
         private System.Windows.Forms.Label labelMinimumGrossSalary;
+        private System.Windows.Forms.CheckBox checkBoxPartTime;
     }
 }
